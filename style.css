@@ -1,6 +1,10 @@
 body {
 	font-family: "Arial", sans-serif;
-	background-color: rgb(141, 141, 211);
+	background: linear-gradient(
+		135deg,
+		rgba(141, 141, 211, 1) 0%,
+		rgba(100, 100, 200, 1) 100%
+	);
 	margin: 0;
 	height: 100vh;
 	display: flex;
@@ -16,7 +20,6 @@ body {
 
 	body {
 		font-family: "Arial", sans-serif;
-		background-color: rgb(141, 141, 211);
 		margin: 0;
 		height: 100vh;
 		display: flex;
@@ -49,8 +52,8 @@ body {
 h1 {
 	text-align: center;
 	color: #333;
-	font-size: 2em;
-	margin-bottom: 20px;
+	font-size: 2.5em;
+	margin-bottom: 30px;
 }
 
 .input-group {
@@ -68,7 +71,7 @@ h1 {
 }
 
 #add-item {
-	padding: 5px 10px;
+	padding: px 10px;
 	border: none;
 	background-color: #7eb3eb;
 	color: white;
