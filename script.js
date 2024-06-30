@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const todoList = document.getElementById("todo-list");
 	const search = document.getElementById("search");
 	const add = document.getElementById("add-item");
+	const date = document.getElementsByClassName("date");
 
 	let todos = JSON.parse(localStorage.getItem("todos")) || [];
 
@@ -11,6 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
 			const div = document.createElement("div");
 			const text = document.createElement("span");
 			text.textContent = item;
+
+			const date = document.createElement("div");
+			const currentDate = new Date();
+			const year = currentDate.getFullYear();
+			const month = String(currentDate.getMonth() + 1).padStart(2, "0"); // Months are zero-based
+			const day = String(currentDate.getDate()).padStart(2, "0");
+
+			// Combine into a readable format
+			const formattedDate = `${year}-${month}-${day}`;
+			date.textContent = "Date added: " + formattedDate;
+			date.className = "date";
 
 			const editButton = document.createElement("button");
 			editButton.textContent = "Edit";
@@ -25,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			);
 
 			div.appendChild(text);
+			div.appendChild(date);
 			div.appendChild(editButton);
 			div.appendChild(deleteButton);
 
