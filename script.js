@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			// Combine into a readable format
 			const formattedDate = `${year}-${month}-${day}`;
-			date.textContent = "Date added: " + formattedDate;
+			date.textContent = "Date added:" + formattedDate;
 			date.className = "date";
 
 			const editButton = document.createElement("button");
@@ -36,10 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
 				deleteItem(index, div)
 			);
 
+			const button_container = document.createElement("div");
+			button_container.appendChild(editButton);
+			button_container.appendChild(deleteButton);
+
 			div.appendChild(text);
 			div.appendChild(date);
-			div.appendChild(editButton);
-			div.appendChild(deleteButton);
+			div.appendChild(button_container);
 
 			// Add the fade-in class for the add animation
 			div.classList.add("fade-in");

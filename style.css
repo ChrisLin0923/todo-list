@@ -1,11 +1,36 @@
 body {
 	font-family: "Arial", sans-serif;
-	background-color: #f4f4f9;
+	background-color: rgb(141, 141, 211);
 	margin: 0;
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+@media only screen and (max-device-width: 600px) {
+	.fade-in {
+		animation: fadeIn 0.5s ease-in-out;
+		flex-direction: column;
+	}
+
+	body {
+		font-family: "Arial", sans-serif;
+		background-color: rgb(141, 141, 211);
+		margin: 0;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.container {
+		background-color: rgb(141, 141, 211) !important;
+		box-shadow: none !important;
+	}
+
+	#todo-list div {
+		background-color: rgb(226, 238, 249) !important;
+	}
 }
 
 .container {
@@ -18,7 +43,7 @@ body {
 	height: 80%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 
 h1 {
@@ -43,9 +68,9 @@ h1 {
 }
 
 #add-item {
-	padding: 10px 20px;
+	padding: 5px 10px;
 	border: none;
-	background-color: #007bff;
+	background-color: #7eb3eb;
 	color: white;
 	border-radius: 4px;
 	cursor: pointer;
@@ -53,7 +78,7 @@ h1 {
 }
 
 #add-item:hover {
-	background-color: #0056b3;
+	background-color: #5a89bb;
 }
 
 #todo-list {
@@ -67,16 +92,12 @@ h1 {
 	background-color: #fafafa;
 	padding: 15px;
 	margin-bottom: 10px;
-	border: 1px solid #ddd;
+
 	border-radius: 4px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	transition: all 0.3s ease;
-}
-
-#todo-list div:nth-child(odd) {
-	background-color: #f0f0f0;
 }
 
 #todo-list span {
@@ -92,7 +113,7 @@ h1 {
 	border-radius: 3px;
 	cursor: pointer;
 	font-size: 0.9em;
-	color: #0363c9;
+	color: #000000;
 }
 
 .edit-button,
@@ -106,21 +127,21 @@ h1 {
 }
 
 .edit-button {
-	background-color: #28a745;
+	background-color: #86f29f;
 	color: white;
 }
 
 .edit-button:hover {
-	background-color: #218838;
+	background-color: #6cd081;
 }
 
 .delete-button {
-	background-color: #dc3545;
+	background-color: #e1727d;
 	color: white;
 }
 
 .delete-button:hover {
-	background-color: #c82333;
+	background-color: #a94650;
 }
 
 /* Add animation for adding an item */
