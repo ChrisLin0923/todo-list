@@ -17,6 +17,23 @@
 				<!-- To-Do items will be displayed here -->
 			</div>
 		</div>
+
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h2>Add a new To-Do</h2>
+				<label for="description">Description:</label><br />
+				<input
+					type="text"
+					id="description"
+					placeholder="Enter the to-do description"
+				/><br /><br />
+				<label for="due-date">Due Date:</label><br />
+				<input type="date" id="due-date" /><br /><br />
+				<button id="add-todo">Add To-Do</button>
+			</div>
+		</div>
+
 		<script src="script.js" defer></script>
 	</body>
 </html>
